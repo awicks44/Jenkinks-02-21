@@ -1,13 +1,19 @@
 pipeline {
 	agent any
 	stages {
-		stage('Stage 1') {
+		stage('Build') {
 			steps {
-				echo 'Hello World!'
+				echo 'Hello World! - Building'
+			}
+		}
+
+		stage('Test') {
+			steps {
+				echo 'Hello World! - Testing'
 			}
 		}
 	}
-	
+
 	post {
 		success {
 			echo 'Successful Build'
